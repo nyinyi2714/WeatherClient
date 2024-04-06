@@ -1,18 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { Country } from '../countries/country';
+import { Country } from './country';
 import { environment } from '../../environments/environment.development';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+
 
 @Component({
   selector: 'app-country',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, RouterLinkActive, RouterOutlet],
   templateUrl: './country.component.html',
-  styleUrl: './country.component.css'
+  styleUrl: './country.component.scss'
 })
 export class CountryComponent {
   public countries : Country[] = [];
-  baseUrl = "http://localhost:5137/";
 
   constructor(private http: HttpClient) {}
 
