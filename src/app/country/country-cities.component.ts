@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { City } from './city';
 import { environment } from '../../environments/environment.development';
 import { HttpClient } from '@angular/common/http';
@@ -12,7 +12,7 @@ import { MatTableModule } from "@angular/material/table";
   templateUrl: './country-cities.component.html',
   styleUrl: './country-cities.component.css'
 })
-export class CountryCitiesComponent {
+export class CountryCitiesComponent implements OnInit {
   public cities : City[] = [];
   public displayedColumns : string[] = ["cityId", "name", "latitude", "longtitude"];
   public countryId : number;

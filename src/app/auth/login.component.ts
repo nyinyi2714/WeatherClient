@@ -16,9 +16,7 @@ import { LoginRequest } from './login-request';
 export class LoginComponent implements OnInit {
   public form!: UntypedFormGroup;
 
-  constructor(private authService: AuthService, private router: Router) {
-    
-  }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
     this.form = new UntypedFormGroup({ 

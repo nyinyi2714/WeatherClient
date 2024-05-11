@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Country } from './country';
 import { environment } from '../../environments/environment.development';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
@@ -12,7 +12,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   templateUrl: './country.component.html',
   styleUrl: './country.component.scss'
 })
-export class CountryComponent {
+export class CountryComponent implements OnInit {
   public countries : Country[] = [];
 
   constructor(private http: HttpClient) {}
